@@ -1,0 +1,9 @@
+/.idea
+node_modules/
+/coverage
+/build
+/travis-ci
+/gh-pages
+/.work
+!/bin
+.eslintcache

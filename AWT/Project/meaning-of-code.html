@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<title>Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap 4.5 CSS-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- Bootstrap JS Requirements -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
+
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {
+        width: 120px;
+        background: #222;
+    }
+
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {
+        margin-left: 120px
+    }
+
+    .img-src {
+    position: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+.article {
+  width:500px;
+  height: 2000px;
+}
+
+#bg-img{
+    background-image:url('https://skyje.com/wp-content/uploads/2013/08/stock-photography.jpg'),url('https://www.dlf.pt/png/big/14/140272_default-avatar-png.png');
+    background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  background-size: 50%,50%;
+}
+
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {
+        #main {
+            margin-left: 0
+        }
+    }
+</style>
+
+<!-- <div class="w3-black"> -->
+
+
+<div id="text">
+<div id="blurred-image-container">
+    <div class="img-src" id="bg-img"
+        style="background-image:url('https://skyje.com/wp-content/uploads/2013/08/stock-photography.jpg')">
+    </div>
+</div>
+
+
+
+<nav class=" fixed-top navbar navbar-expand-lg navbar-light w3-hide-small py-5" style="background-color:#ADC7C5;">
+    <a class="navbar-brand" href="#" style="font-size:xx-large">Meaning of Code</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+            </li>
+           
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">C</a>
+                    <a class="dropdown-item" href="#">Java</a>
+                    <a class="dropdown-item" href="#">Python</a>
+                    <a class="dropdown-item" href="#">HTML</a>
+                    <a class="dropdown-item" href="#">CSS</a>
+                    <a class="dropdown-item" href="#">JS</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">React JS</a>
+                    <a class="dropdown-item" href="#">React Native</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#contact">Contacts</a>
+            </li>
+        </ul>
+        
+    </div>
+</nav>
+
+
+
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <!-- <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="background-color:white;height:100%"> -->
+        <!-- Avatar image in top left corner -->
+        <!-- <img src="http://getwallpapers.com/wallpaper/full/3/9/b/1420579-hacker-background-2048x1152-for-tablet.jpg" style="width:100%">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p style="color:gray">HOME</p>
+        </a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p style="color:gray ; font-weight:bold">ABOUT</p>
+        </a>
+        <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-eye w3-xxlarge"></i>
+            <p style="color:gray ; font-weight:bold">PROJECTS</p>
+        </a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p style="color:gray ; font-weight:bold">CONTACT</p>
+        </a>
+    </nav> -->
+
+    
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium fixed-top" id="myNavbar" >
+        <div class="w3-bar w3-white  w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
+            <a href="#projects" class="w3-bar-item w3-button" style="width:30% !important">PROJECTS</a>
+            <a href="#contact" class="w3-bar-item w3-button" style="width:30% !important">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center " id="home" >
+            <h1 class="w3-jumbo w3-hide-small w3-text-black" style="margin-top:12.5%;"><span class="w3-hide-small w3-text-black" >I'M </span> A D I T Y A</h1>
+            <h1 class="w3-jumbo w3-hide-large w3-hide-medium w3-text-black" style="margin-top:9.75%;">ADITYA</h1>
+            <p style="color:black">Founder, CEO - Meaning Of Code</p>
+            <img src="https://lh3.googleusercontent.com/K9gIVz6GK3cAJNREzL3Al9gDi-yHnvUSjJGhKuDqzQTVAwtqSh-CuWvVq5rXyjZAjI_kMVsGHM5yyVnobmhFxnt5e40Gs2Jjl-7u-yhKWkdnnIrCxxtbu4EyF5Tnp0NXvSF1ka3BkoA01-ptpF_HpOja-_syuFBBmHOIHsorT3g8vl08159mOJ-75wDs753BxB92HNS3B3ylQxO4W0VPDdlqqHDtZTqtyEpC-ZZMQ2tVXCATyjB2O6lmXmg7cT_ar02b4F2VD0bVIfp5FPLjmtoU19De3Eb69h6OSOQ8L6twm2lyvViNOdnkBlk2GWMAyveZhJkvs982jqRRcSLRqBamj9m9aD6IrlvMKMNCJinH7Fr93WHzJPFMDsGqB7l-p0ZuFX4P6oMIUEvCwuAI9G4lo0n2AtKpJG5xpUhyW0TDoIuLcQnHdCOGksCzq1zDtjG3ls18vQbGTaH7NBrHsPCi5w94sxkSeF5etkc5bjVJHVx92yKSSbl3OQofuzlciorPm-ZyL21W-qdtrUo7CgzCCpLxYP2wv6xuuWWMHpFgmLPwUZhqwkwnqqJQNXIKY9swQ-LJH7ok57xo5-ioZsZpTjWlSIONMZmKgWIU01YjMcO8h3jMLRRYtKX3nhP5iv1n0T_QxojAnIrtiAYbziG2NVomPRFEmS1RnliF8-j4gKleztTcB2FPT5abdc6z2WirmNaIvFtjmF_HK_ZbMOuf=w822-h873-no?authuser=0" 
+            alt="boy" 
+            class="w3-image" 
+            width="500" 
+            height="25">
+        </header>
+
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-black">A D I T Y A</h2>
+            <hr style="width:200px " class="w3-opacity">
+            <p style="color:black" > Hardworking, Passionate, Great Thinker, Open-Minded, Great Problem Solver, Optimistic, Nut-Picker ...
+            </p>
+            <h3 class="w3-padding-16 " style="color:black">My Skills</h3>
+            <p class="w3-wide" style="color:black">React Native</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+            </div>
+            <p class="w3-wide" style="color:black">React JS</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:90%"></div>
+            </div>
+            <p class="w3-wide" style="color:black">Web Design</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+            </div>
+            <p class="w3-wide" style="color:black">Java</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+            </div>
+
+            <p class="w3-wide" style="color:black">Data Structures & Algorithms</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+            </div>
+            <p class="w3-wide" style="color:black">JavaScript</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:90%"></div>
+            </div><br><br>
+
+            <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">1+</span><br>
+                    Partners
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">5+</span><br>
+                    Projects Done
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">3+</span><br>
+                    Happy Clients
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">1+</span><br>
+                    Meetings
+                </div>
+            </div>
+
+            <button class="w3-button w3-light-grey w3-padding-large w3-section">
+                
+                <a href="/C:/Users/adity/Downloads/Aditya_InternshalaResume.pdf" download><i class="fa fa-download"></i> Download Resume</a>
+            </button>
+
+            <!-- Grid for pricing tables -->
+            <h3 class="w3-padding-16 w3-text-black">My Price</h3>
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half w3-margin-bottom">
+                    <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">App Design</li>
+                        <li class="w3-padding-16">5GB Storage</li>
+                        <li class="w3-padding-16">Mail Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 1,000</h2>
+                            <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <a href="#contact"><button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-half">
+                    <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+                        <li class="w3-padding-16">Web Development</li>
+                        <li class="w3-padding-16">App Development</li>
+                        <li class="w3-padding-16">50GB Storage</li>
+                        <li class="w3-padding-16">Endless Support</li>
+                        <li class="w3-padding-16">
+                            <h2>$ 5,000</h2>
+                            <span class="w3-opacity">per 3 month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <a href="#contact"><button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Grid/Pricing tables -->
+            </div>
+
+            <!-- Testimonials -->
+            <div class="w3-padding-64 w3-content" id="Reputation">
+                <h2 class="w3-text-black">My Reputation</h2>
+                <hr style="width:200px" class="w3-opacity">
+            
+            <img src="https://www.chitkarauniversity.edu.in/wp-content/uploads/2019/07/DR-ASHOK-K-CHITKARA.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                style="width:80px">
+            <p style="color: black;"><span class="w3-large w3-margin-right">Dr.Ashok-Chitkara.</span> Chancellor at CHITKARA UNIVERSITY.</p>
+            <p style="color:black">Aditya saved us from a web disaster.</p><br>
+
+            <img src="https://www.chitkara.edu.in/global-week/wp-content/uploads/2020/04/mohit-kakkar.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+                style="width:80px">
+            <p style="color:black"><span class="w3-large w3-margin-right">Dr.Mohit-Kakkar.</span> Associate Dean at CHITKARA UNIVERSITY.</p>
+            <p style="color: black;">No one is better than Aditya.</p>
+            <!-- End About Section -->
+        </div>
+        </div>
+    
+
+        <!-- Portfolio Section -->
+        <!-- <div class="w3-padding-64 w3-content" id="photos">
+            <h2 class="w3-text-light-grey">My Photos</h2>
+            <hr style="width:200px" class="w3-opacity"> -->
+
+            <!-- Grid for photos -->
+            <!-- <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half">
+                    <img src="http://getwallpapers.com/wallpaper/full/3/9/b/1420579-hacker-background-2048x1152-for-tablet.jpg" style="width:100%">
+                    <img src="https://lh3.googleusercontent.com/CM-x0eYDvwS4czRPFhW9hr708A6F_FFWQzOdyDA4dGwBVC0VECO7JMF_gbfobPFl5ZvTLd585ATb2OIluPuxHC3HUodE3DWDds5ZmXslAAqlH0ffGQx51SJlDtDTiUM6cwyN9AiWYtCN665hARasgSxFQC9be7AhUVmuN7bMVZeUJVOW-utRlDs0Q1t2OUFbm_OSeMZFyzKLEQlBlrDT4gg-K_oDq9Zo33gTWCBFX_B_sC5LKFJWJAuu6p2k7OPR4xV5EacF8PJ3wU5kQDsfOCauMYx03SFJMf9fgSzYELb0GjpKFs0CrrJRA5J8WVu1i4RKjSk5dn9aTKBNegp1silAYieVKP-hyzWDIyBv2c9fL_v4z8JESzqR4vk05-iM-Ped26QdjU7FD9AanQbWbn9QK40IpCMsSNJL-lZeKsPDbwzbHeg1Mcm6eKJb3ApZKvHfOaubgzqnxHNvmBG3WDT6Odcbd0cm45hhmS9tz5HoEoECjAMesCZNq56VKhE2vk6DGPTi9yL24mHdrBFDR5blLZp3-5ZlMXetBsizoQmN_DsCvx624HDCaoI69uU6PjZKujuhPOIyUrGx27pSxO91kw83E3ciiNu-Mae3sUIVloQoUi9c_GntYyMFg7fkb_JRvV1t2m1LXvE-PaWkGTaYdOlcVy2991QWvt4LDKkwHQKH_E3HJA7f_aejtBvINidAIAk5elm-PyL24gAmtnU0=w888-h943-no?authuser=0" style="width:100%">
+                    <img src="https://lh3.googleusercontent.com/ZomMpADArRrxF8WR0qUq6MJ68EX_d-9JB-JqmLnMKHCc2-_jD0F0HwFyn_5Kb3-mm5fxa5iHN-qUPTt1EZtG5IWPX2DS06Gjo5yJgXsWLuSFiAwNO5SB_Qnlzq5otZabkOf5cLsTGbGqpWc3RAC4kMPs6GCNv19ShB1pKG8dNXWpOwiO7Vky0fEzK3OKWwW99_qzIZNN27EycgqqI0Pabgj3smBDBzmJJiXr2tiBLF3IRYs_Rx4NGFRXamaTNHvd6CecWoCKLhgNNFNhR9knRxyCSLsQEK1khCN22Xuo_egOW5jq4SBgqssBUnQPgLmAi4CsjceRupYj5UPPOtQ4KJ_QA0wIgSYCAbrala74bTO25nSOj6wCB_ffq7te_6DJvkhVrMM8Eq1dTgW0PZGw-fg1iPo6yyx9A4IbbOGlXgj8WH0ta46bQSXiMo0J2AfyxAZd4KZrrM7-w6DCJJRQNou9qrHc2dUIA-2F-NA18pdjozb-5R4dMRmXYGmny2NMkXFh_ta-QqNxaVjqKoxeNJ0cLbmnZ1_WIOo7SUsD8tOYe0LqSybqNf1szPJzwQiKNDRwLRNH_JDqqi9ZGAFhedukgmwo2SgPf-PfVAoUYMJGP5YgJJxcFTEL0T9xdIuSh6MtzyA2c3cAbVR0Lo7kz4NiCrsgZsQN4dQQ1Y6ZUYA9-nqamyYxTxFjRsgjuU0nf43kfs4Aso8LBz0Y8pVanvlW=w754-h943-no?authuser=0" style="width:100%">
+                </div>
+
+                <div class="w3-half">
+                    <img  style="width:100%">
+                    <img src="https://images.unsplash.com/photo-1592772874383-d08932d29db7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8aGFja2VyfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80" style="width:100%">
+                    <img src="https://p4.wallpaperbetter.com/wallpaper/733/791/743/anonymus-hacker-computer-mask-wallpaper-preview.jpg" style="width:100%">
+                    <img src="https://i.pinimg.com/originals/a7/5b/11/a75b1179c3423340ac2e03121778da35.jpg" style="width:100%">
+                </div> -->
+                <!-- End photo grid -->
+            <!-- </div> -->
+            <!-- End Portfolio Section -->
+        <!-- </div> -->
+
+
+
+
+
+
+
+
+        <!--Projects Section -->
+       
+         <div class="w3-padding-64 w3-content" id="projects">
+            <h2 class="w3-text-black">Projects</h2>
+            <hr style="width:200px ; color:#CBE1D8" class="w3-opacity">
+
+            <div class="row" style="padding: 5px;">
+            <div class="card" style="width: 18rem; margin:15px">
+                <div class="card-body" >
+                    <div class="container">
+                        <img class="card-img-top" src="data:image/png;base64,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" alt="Card image cap">
+                    </div>
+                    <h5 class="card-title">C Programming Codes</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Click on Link to get the Source Code</h6>
+                    <p class="card-text">Here you can find out all of my Projects done on C Programming Language.</p>
+                    <a href="/D:/Chitkara University/4th sem/AWT/Project/c-programming.html" class="card-link">Source Code</a>
+                    
+                </div>
+            </div>
+           
+            
+        
+            
+        <div class="card" style="width: 18rem;margin:15px">
+            <div class="card-body">
+                <div class="container">
+                    <img class="card-img-top" src="https://4a7efb2d53317100f611-1d7064c4f7b6de25658a4199efb34975.ssl.cf1.rackcdn.com/dark-days-oracle-kills-java-plug-in-dead-showcase_image-9-p-2047.jpg" alt="Card image cap">
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+            
+           
+        
+           
+        <div class="card" style="width: 18rem;margin:15px">
+            <div class="card-body">
+                <div class="container">
+                    <img class="card-img-top" src="https://i.pinimg.com/736x/4d/13/d5/4d13d55d6d0b38b7a4e85fcf97ff6279.jpg" alt="Card image cap">
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+           
+           
+       
+            
+        <div class="card" style="width: 18rem;margin:15px">
+            <div class="card-body">
+                <div class="container">
+                    <img class="card-img-top" src="https://is2-ssl.mzstatic.com/image/thumb/Purple124/v4/fd/b6/3f/fdb63f89-c074-45fb-20ac-1cf5bf6251c9/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png" alt="Card image cap">
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+           
+            
+       
+          
+            <div class="card" style="width: 18rem;margin:15px">
+                <div class="card-body">
+                    <div class="container">
+                        <img class="card-img-top" src="https://i.pinimg.com/originals/d5/b9/3b/d5b93bad3c10cc5b92b47e4678598548.jpg" alt="Card image cap">
+                    </div>
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+          
+        
+   
+        <div class="card" style="width: 18rem;margin:15px">
+            <div class="card-body">
+                <div class="container">
+                    <img class="card-img-top" src="https://ih1.redbubble.net/image.1091728854.1060/flat,750x1000,075,f.jpg" alt="Card image cap">
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+            
+        
+      
+
+
+          
+        <div class="card" style="width: 18rem;margin:15px">
+            <div class="card-body">
+                <div class="container">
+                    <img class="card-img-top" src="https://www.freecodecamp.org/news/content/images/2020/02/Ekran-Resmi-2019-11-18-18.08.13.png" alt="Card image cap">
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                <a href="/D:/Chitkara University/4th sem/AWT/Project/react-social.html" class="card-link">Card link</a>
+            </div>
+        </div>
+           
+       
+    
+           
+        <div class="card" style="width: 18rem;margin:15px">
+            <div class="card-body">
+                <div class="container">
+                    <img class="card-img-top" src="https://miro.medium.com/max/700/1*C3kxjCrJy-aWSMpe2chfaA.png" alt="Card image cap">
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+    </div>
+        </div>
+        </div>
+        
+   
+        
+    
+
+
+        
+        
+
+
+
+        <!-- Contact Section -->
+        <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+            <h2 class="w3-text-black">Contact Me</h2>
+            <hr style="width:200px" class="w3-opacity">
+
+            <div class="w3-section" style="color: black;">
+                <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> I N D I A</p>
+                <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +91 8901459471</p>
+                <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: aditya0183.cse19@chitkara.edu.in
+                </p>
+            </div><br>
+            <p style="color: black;">Let's get in touch. Send me a message:</p>
+
+
+            <form action="mailto:aditya0183.cse19@chitkara.edu.in" method="POST" enctype="multipart/form-data" name="EmailForm">
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+                <p>
+                <button class="w3-button w3-light-grey w3-padding-large" type="submit" value="Submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </p>
+            </form>
+            <!-- End Contact Section -->
+        </div>
+
+        <!-- Footer -->
+        <div class="w3-padding-64 w3-content w3-text-grey">
+        <div style="background-color: white; height:40px ; width:200px ; border-radius:20px" >
+        
+            <footer class="w3-content padding-5 w3-text-grey w3-xlarge">
+            <i class="fa fa-facebook-official w3-hover-blue fa-lg"></i>
+            <i class="fa fa-instagram w3-hover-pink fa-lg"></i>
+            <i class="fa fa-snapchat w3-hover-yellow fa-lg"></i>
+            <i class="fa fa-pinterest-p w3-hover-red fa-lg"></i>
+            <i class="fa fa-twitter w3-hover-blue fa-lg"></i>
+            <a href="https://www.linkedin.com/in/aditya-null-3aa4941b1"><i class="fa fa-linkedin w3-hover-blue fa-lg"></i></a>
+            
+            <!-- End footer -->
+        </footer>
+        </div>
+        </div>
+
+        <!-- END PAGE CONTENT -->
+    </div>
+    </div>
+
+</body>
+
+</html>

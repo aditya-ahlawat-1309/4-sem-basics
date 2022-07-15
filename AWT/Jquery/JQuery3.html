@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Jquery Page mouseenter</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("h1").mouseenter(function () {
+                alert("You entered a heading");
+            });
+
+            $("h1").mouseleave(function () {
+                alert("You went away a heading");
+            });
+
+
+        });
+    </script>
+
+<body>
+    <h1>Chitkara University</h1>
+    <p>This is my 3 Jquery page</p>
+    <button>Click me to see effects !</button>
+
+</body>
+</head>
+
+</html>
